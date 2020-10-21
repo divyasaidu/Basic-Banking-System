@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Banking system</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="style.css">
+<style>
+h4{
+font-family:Monotype Corsiva;
+font-size:20px;
+color:white;
+}
+</style>
+
+<script>
+function myFunction() {
+ if ((document.form.giver.selectedIndex == 0)|| (document.form.reciever.selectedIndex==0)) {
+                alert("Please select a user to transfer ");
+                return false;
+}
+
+
+var x;
+x = document.getElementById("numb").value;
+ if (isNaN(x)||x<0) {
+    alert( "Input not valid");
+  } else {
+    
+
+  alert("Tranfer Succesful");
+}
+
+}
+</script>
+</head>
+<body >
+<div class="topnav">
+  <a class="active" href="home.html">Home</a>
+  <a href="viewusers.html">View Users</a>
+  <a href="transaction.html">Transfer Amount</a>
+  <a href="transactionhistory.html">Transaction History</a>
+</div>
+<div class="center">
+ <form method="POST" id="form" name="form">
+<br><h4>Transfer From:</h4>    
+<select class="select" name="giver" id="giver">
+    <option value="None" selected>None</option>
+        <option value="rishi">Rishi</option>
+        <option value="divya">Divya</option>
+        <option value="cherry">Cherry</option>
+        <option value="akhila">Lakshmi Akhila</option>
+        <option value="khyathi">Khyathi</option>
+        <option value="sravani">Sravani</option>
+        <option value="mydhili">Mydhili</option>
+        <option value="matsa">Matsa</option>
+        <option value="hima">Hima</option>
+        
+            
+</select>
+<h4>Transfer To:</h4>  
+<select class="select" name="reciever" id="reciever">
+    <option value="None" selected>None</option>
+        <option value="rishi">Rishi</option>
+        <option value="divya">Divya</option>
+        <option value="cherry">Cherry</option>
+        <option value="akhila">Lakshmi Akhila</option>
+        <option value="khyathi">Khyathi</option>
+        <option value="sravani">Sravani</option>
+        <option value="mydhili">Mydhili</option>
+        <option value="matsa">Matsa</option>
+        <option value="hima">Hima</option>
+       
+    </select><br>
+
+<h4 style="color:red">Amount to be credited:</h4><input  id="numb" placeholder="Amount" name="amount">
+<br><br>
+
+<button  class="button"onclick="myFunction()">Transfer</button>
+
+
+
+</form>
+</div>
+
+</body>
+</html>
